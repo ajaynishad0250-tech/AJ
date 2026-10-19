@@ -55,7 +55,8 @@ export default function App() {
     if (!API_URL) { addMessage("assistant", t.noServer); return; }
     setBusy(true);
     try {
-      const response = await fetch(API_URL.replace(/\/$/, "") + "/chat", {
+      const baseUrl = API_URL.endsWith("/") ? API_URL.slice(0, -1) : API_URL;
+      const response = await fetch(baseUrl + "/chat",
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: prompt, language })

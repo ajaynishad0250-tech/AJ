@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "AJAY JARVIS AI",
+    "slug": "ajay-jarvis-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.ajaynishad.jarvisai",
+      "permissions": ["android.permission.RECORD_AUDIO"]
+    },
+    "plugins": [
+      ["expo-speech-recognition", {
+        "microphonePermission": "AJAY JARVIS AI needs microphone access only when you tap the voice button.",
+        "speechRecognitionPermission": "AJAY JARVIS AI turns your spoken prompt into text."
+      }]
+    ]
+  }
+}
